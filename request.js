@@ -48,7 +48,19 @@ axios.get('https://jsonplaceholder.typicode.com/photos')
 
 
 // using JQuery
-console.log(window)// check the console inthe webpage and check for the "$" symbol this is for jquery
+//console.log(window)// check the console inthe webpage and check for the "$" symbol this is for jquery
+$(document).ready(function(){
+    $.ajax({
+        url:'https://jsonplaceholder.typicode.com/posts',
+        type:"GET",
+        success:function(result){
+            console.log(result)
+        },
+        error:function(err){
+            console.log(err);
+        }
 
+    })
+})
 
 
