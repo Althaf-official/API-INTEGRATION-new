@@ -15,9 +15,24 @@ request.onload = ()=>{
 
 //fetch api
 
-fetch('https://jsonplaceholder.typicode.com/users')
-.then(response=>{//default promise is here
-    return response.json();
-}).then(json=>{
-    console.log(json);
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then(response=>{//default promise is here
+//     return response.json();
+// }).then(json=>{
+//     console.log(json);
+// })
+
+
+//fetch API second approch using async
+async function getUsers(){
+    let response = await fetch('https://jsonplaceholder.typicode.com/albums');
+    let data = await response.json();
+    console.log(data)
+    return data;
+   
+}
+getUsers().then(response=>{
+    console.log(response);
+   
+    
 })
