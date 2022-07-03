@@ -39,10 +39,16 @@ getUsers().then(response=>{
 
 
 //axios-third party javascript library
-axios.get('https://jsonplaceholder.typicode.com/photos11ssf1')
+axios.get('https://jsonplaceholder.typicode.com/photos')
      .then(response=>{
-        console.log(response.data);
+        //console.log(response.data);
      }),err=>{
-        console.log(err)
+       // console.log(err)
      }
+
+
+// using JQuery
+console.log(window)// check the console inthe webpage and check for the "$" symbol this is for jquery
+
+
 
