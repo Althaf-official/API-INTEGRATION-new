@@ -1,3 +1,5 @@
+
+
 const request =new XMLHttpRequest();
 request.open("GET", "https://jsonplaceholder.typicode.com/users");
 request.send();
@@ -13,4 +15,9 @@ request.onload = ()=>{
 
 //fetch api
 
-console.log(window)
+fetch('https://jsonplaceholder.typicode.com/users')
+.then(response=>{//default promise is here
+    return response.json();
+}).then(json=>{
+    console.log(json);
+})
