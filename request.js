@@ -2,5 +2,8 @@ const request =new XMLHttpRequest();
 request.open("GET", "https://jsonplaceholder.typicode.com/users");
 request.send();
 request.onload = ()=>{
-    console.log(request);
+    if(request.status === 200){//now the status is 200 then only the onload function will work
+        console.log(request.response);
+
+    }
 }
