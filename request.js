@@ -27,12 +27,16 @@ request.onload = ()=>{
 async function getUsers(){
     let response = await fetch('https://jsonplaceholder.typicode.com/albums');
     let data = await response.json();
-    console.log(data)
+   // console.log(data)
     return data;
    
 }
 getUsers().then(response=>{
-    console.log(response);
+   // console.log(response);
    
-    
 })
+
+
+
+//axios-third party javascript library
+console.log(window)
