@@ -39,8 +39,10 @@ getUsers().then(response=>{
 
 
 //axios-third party javascript library
-axios.get('https://jsonplaceholder.typicode.com/photos')
+axios.get('https://jsonplaceholder.typicode.com/photos11ssf1')
      .then(response=>{
         console.log(response.data);
-     })
+     }),err=>{
+        console.log(err)
+     }
 
